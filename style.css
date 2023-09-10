@@ -1,0 +1,93 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    position: relative;
+  }
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Helvetica Neue";
+    background-color: #f4f4f5;
+  }
+  
+body > div {
+    margin: auto;
+}
+.edit{
+    position: fixed;
+    right: 25px;
+    top: 25px;
+}
+.toast{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 2px;
+    border-left: 4px solid;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.8);
+    padding: 20px 0;
+    min-width: 400px;
+    max-width: 450px;
+    animation: slideInLeft ease 2s, fadeOut linear 3s 4s forwards;
+    border-color: #47d864;
+}
+.toast-icon{
+    font-size: 24px;
+    padding-left: 20px;
+    color: #47d864;
+}
+.toast-body{
+    padding-left: 28px;
+}
+.toast-title{
+
+}
+.toast-msg{
+
+}
+.toast-close{
+    color: rgb(0, 0, 0, 0.3);
+    padding: 0px 90px;
+    left: 60px;
+    position: relative;
+    cursor: pointer;
+}
+@keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(calc(100% + 30px));
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+@keyframes fadeOut {
+    to {
+      opacity: 0;
+    }
+  }
+.btn--success {
+    background-color: #71be34;
+}
+.btn + .btn {
+    margin-left: 16px;
+}
+.btn--danger {
+    background-color: #ff623d;
+}
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    padding: 12px 48px;
+    border-radius: 50px;
+    cursor: pointer;
+    min-width: 120px;
+    transition: opacity 0.2s ease;
+    color: #fff;
+}  
